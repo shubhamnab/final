@@ -60,7 +60,7 @@ var quizMaster = (function () {
 			html += "</fieldset></div></form>" + nextButton() + previousButton();
 			displayDom.html(html).trigger('create');
 		} else if(current.state === "complete") {
-			html = "<h2>Complete!</h2><p>The quiz is now complete. You got "+current.correct+" correct out of "+data.questions.length+".</p>";
+			html = "<h2>Complete!</h2><p>The quiz is now complete. You got "+current.correct+" correct out of "+data.questions.length+".</p><br> <br><button onclick=location.href='index.html'>Back to Home</button>";
 			displayDom.html(html).trigger('create');
 			removeUserStatus();
 			successCb(current);
