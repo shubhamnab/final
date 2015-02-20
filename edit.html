@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style/demo.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+<script src="js/main.js"></script>
+<link rel="stylesheet" href="style/demo.css">
+<style>
+a {
+	 font-weight:100 !important; 
+}
+</style>
+</head>
+<body>
+
+
+<script>
+function test() {
+    window.location.href = "index1.html";
+}
+
+</script>
+<script>
+function logout()
+{
+//window.localStorage.remove();
+window.localStorage. clear() ;
+window.location.href = "index.html";
+}
+</script>
+<script>
+function edit(){
+window.location.href="edit.html";
+}
+</script>
+<script>
+function home(){
+window.location.href="profile.html";
+}
+</script>
+<script type="text/javascript">
+   $(document).ready(function(){
+  $("#mainmenu").click(function(){
+    $("#menu").toggle();
+  });
+});
+</script>
+<div data-role="main" class="ui-content" style="margin-left:10%">
+    <button class="ui-btn">"Update Your Profile"</button>
+</div>
+<div data-role="page" id="button11">
+<img src="images/buzz-logo.png" width="60%">
+<hr style="height:4px; background-color:#0C9; border-style:none; width:100%;">
+<div style="width:96%;">
+<div style="float:left; margin-left:10px;margin-top:11%">
+
+<ul style="list-style-type:none; padding:0; margin:0; position:absolute; z-index:1000000">
+<li id="mainmenu"><img src="images/nav_icon.png">
+<ul id="menu" style="list-style-type:none; padding:0; display:none; border-style:groove; border-radius:5px; height:auto;; background-color:#fff;">
+<li onclick="home()" style="font-size:18px; "><img src="images/a.png" width="20%" height="20%" style=" vertical-align:middle;"><a href="#" style="text-decoration:none; vertical-align:middle;color:#7aa76d;">Home</a></li>
+<li onclick="edit()" style="font-size:18px; "><hr><img src="images/b.jpg" width="20%" height="20%" style=" vertical-align:middle;"><a href="#" style="text-decoration:none; vertical-align:middle;color:#7aa76d;">Edit Profile</a></li>
+<li onclick="test()" style="font-size:18px; "><hr><img src="images/c.png" width="20%" height="20%" style=" vertical-align:middle;"><a href="#" style="text-decoration:none; vertical-align:middle;color:#7aa76d;">Test Paper</a></li>
+<li style="font-size:18px;"><hr><img src="images/d.png" width="20%" height="20%" style=" vertical-align:middle;"><a href="#" style="text-decoration:none; vertical-align:middle;color:#7aa76d;">My Stats</a></li>
+<li onclick="logout()" style="font-size:18px;"><hr><img src="images/e.png" width="20%" height="20%" style=" vertical-align:middle;"><a href="#" style="text-decoration:none; vertical-align:middle;color:#7aa76d;">Log Out</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div data-role="main" class="ui-content" style="margin-left:10%">
+    <button>"Update Your Profile"</button>
+</div>
+        <div data-role="content" id="page1con" style="margin-top:-7%">
+<div align="center">
+<a href="#popup_personal" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-edit ui-btn-icon-left ui-btn-a" data-transition="pop">Personal Information</a>
+</div>
+<div align="center">
+<a href="#popup_educational" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-edit ui-btn-icon-left ui-btn-a" data-transition="pop">Eduational Information</a>
+    </div>
+	<div align="center">
+<a href="#popup_professional" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-edit ui-btn-icon-left ui-btn-a" data-transition="pop">Professional Information</a>
+</div>
+<div align="center">
+<button  class="ui-btn">Tags</button>
+<a href="#headline1" data-role="button" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-edit ui-btn-icon-left ui-btn-a">Add  </a>
+           
+<a href="#headline" data-role="button" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-edit ui-btn-icon-left ui-btn-a">Remove</a>
+       </div>
+	   <div align="center">
+<button  class="ui-btn">Specializations</button>
+<a href="#headline2" data-role="button" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-edit ui-btn-icon-left ui-btn-a">Add </a>
+            
+<a href="#headline3" data-role="button" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-edit ui-btn-icon-left ui-btn-a">Remove </a>
+    </div>
+	</div>
+
+    
+<div data-role="popup" id="popup_personal" data-theme="a" class="ui-corner-all">
+    
+        <div style="padding:10px 20px;">
+            <h3>Edit Your Personal Information</h3>
+            <label for="doc_name" class="ui-accessible">Name</label>
+            <input type="text" name="doc_name" id="doc_name" data-theme="a">
+            <button class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check" onclick="send_name();">Save</button>
+            
+            
+                         
+            
+            
+</div>
+        <div data-role="popup" id="popup_educational" data-theme="a" class="ui-corner-all">
+    
+        <div style="padding:10px 20px;">
+            <h3>Edit Your Personal Information</h3>
+            <label for="doc_education" class="ui-accessible">Education</label>
+            <input type="text" name="doc_education" id="doc_education" data-theme="a">
+            <button class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check" onclick="send_education();">Save</button>
+            
+            <label for="doc_hospital" class="ui-accessible">Hospital Affiliation</label>
+            <input type="text" name="doc_hospital" id="doc_hospital" data-theme="a">
+            <button class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check" onclick="send_hospital();">Save</button>
+        </div>
+    
+</div>
+<div data-role="popup" id="popup_professional" data-theme="a" class="ui-corner-all">
+    
+        <div style="padding:10px 20px;">
+            <h3>Edit Your Personal Information</h3>
+           <label for="doc_summary" class="ui-accessible">Professional Statement</label>
+            <input type="text" name="doc_summary" id="doc_summary" data-theme="a">
+            <button class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check" onclick="send_summary();">Save</button>
+            
+            <label for="doc_awards" class="ui-accessible">Awards and Publications</label>
+            <input type="text" name="doc_awards" id="doc_awards" data-theme="a">
+            <button class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check" onclick="send_awards();">Save</button> 
+        </div>
+    
+</div>
+    </div>
+        </div>
+
+    <div data-role="page" id="headline">       
+    <div class="ui-field-contain" data-role="fieldcontain">
+        <fieldset data-role="controlgroup" id="rm_tags">
+        <legend>Choose as many snacks as you'd like:</legend>
+     
+            </fieldset>
+    </div>
+     <button class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check" onclick="send_removetags();">Save</button>
+</div>
+    
+    <div data-role="page" id="headline1">       
+    <div class="ui-field-contain" data-role="fieldcontain">
+        <fieldset data-role="controlgroup" id="add_tags">
+        <legend>Choose as many snacks as you'd like:</legend>
+     
+            </fieldset>
+    </div>
+     <button class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check" onclick="send_addtags();">Save</button>
+</div>
+    
+    <div data-role="page" id="headline2">       
+    <div class="ui-field-contain" data-role="fieldcontain">
+        <fieldset data-role="controlgroup" id="add_speci">
+        <legend>Choose as many snacks as you'd like:</legend>
+     
+            </fieldset>
+    </div>
+         <button class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check" onclick="send_addspeci();">Save</button>
+</div>
+    
+    <div data-role="page" id="headline3">       
+    <div class="ui-field-contain" data-role="fieldcontain">
+        <fieldset data-role="controlgroup" id="remove_speci">
+        <legend>Choose as many snacks as you'd like:</legend>
+     
+            </fieldset>
+    </div>
+         <button class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check" onclick="send_removespeci();">Save</button>
+</div>
+    
+
+<div align="center" style="margin-top:25%">
+    
+        <a href="#" target="_blank" style="margin-left:13%">About Us</a><a href="single.html" target="_blank" style="margin-left:13%">Setting</a><a href="#" target="_blank" style="margin-left:13%">Rate App</a>
+    <div align="center">
+    	<p style="font-color:white">Copyright @ 2013 Whitebutter pvt Ltd</p>
+    </div>
+  </div>
+    </body>
+    </html>

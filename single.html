@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Buzz4Health</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<script src="js/jquery-1.9.1.min.js"></script>
+<link rel="stylesheet" href="style/demo.css">
+
+	
+</head>
+<body style="background-color:#ffffff !important">
+
+<img src="images/buzz-logo.png" width="60%">
+<hr style="height:4px; background-color:#0C9; border-style:none; width:100%;">
+<div style="width:96%;">
+<div style="float:left; margin-left:10px;margin-top:18.5%">
+<ul style="list-style-type:none; padding:0; margin:0; position:absolute; z-index:1000000">
+<li id="mainmenu"><img src="images/nav_icon.png">
+<ul id="menu" style="list-style-type:none; padding:0; display:none; border-style:groove; border-radius:5px; height:auto;; background-color:#fff;">
+<li onclick="home()" style="font-size:18px; "><img src="images/a.png" width="20%" height="20%" style=" vertical-align:middle;"><a href="#" style="text-decoration:none; vertical-align:middle;">Home</a></li>
+<li onclick="edit()" style="font-size:18px; "><hr><img src="images/b.jpg" width="20%" height="20%" style=" vertical-align:middle;"><a href="#" style="text-decoration:none; vertical-align:middle;">Edit Profile</a></li>
+<li onclick="test()" style="font-size:18px; "><hr><img src="images/c.png" width="20%" height="20%" style=" vertical-align:middle;"><a href="#" style="text-decoration:none; vertical-align:middle;">Test Paper</a></li>
+<li style="font-size:18px;"><hr><img src="images/d.png" width="20%" height="20%" style=" vertical-align:middle;"><a href="#" style="text-decoration:none; vertical-align:middle;">My Stats</a></li>
+<li onclick="logout()" style="font-size:18px;"><hr><img src="images/e.png" width="20%" height="20%" style=" vertical-align:middle;"><a href="#" style="text-decoration:none; vertical-align:middle;">Log Out</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<script>
+function test() {
+    window.location.href = "index1.html";
+}
+
+</script>
+<script>
+function logout()
+{
+//window.localStorage.remove();
+window.localStorage. clear() ;
+window.location.href = "index.html";
+}
+</script>
+<script>
+function edit(){
+window.location.href="edit.html";
+}
+</script>
+<script>
+function home(){
+window.location.href="profile.html";
+}
+</script>
+<script type="text/javascript">
+   $(document).ready(function(){
+  $("#mainmenu").click(function(){
+    $("#menu").toggle();
+  });
+});
+</script>
+
+	
+  <div class="wrap"> 
+	<div >
+         <div class="header-bottom" id="home" style="margin-top:-10%">
+		   <h1>"Test : 1"</h1>
+		   <button style="margin-top:3%"><a href="test.html"><h1>Buy Me</h1></a></button>
+		 </div>
+		 
+		 <div class="comment">
+		  		        	<h2>About Test 1</h2>
+							<p>The context it will cover.How many questions this test will include.</p><br><br>
+							</div>
+							
+							<div class="comment">
+		  		        	<h2>Test Format</h2>
+							<p>The context it will cover.How many questions this test will include.</p><br><br>
+							</div>
+							
+							<div class="comment">
+		  		        	<h2>FAQ???</h2>
+							<p>The context it will cover.How many questions this test will include.</p><br>
+							<p>The context it will cover.How many questions this test will include.</p><br>
+							<p>The context it will cover.How many questions this test will include.</p><br>
+							<p>The context it will cover.How many questions this test will include.</p><br>
+							
+							</div>
+							
+	</div>
+ </div>
+</body>
+</html>
